@@ -78,7 +78,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ae15590f5d75c439f669972657387f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NonPhysicsMovement
-  olliePivot: {fileID: 0}
+  olliePivot: {fileID: 6190874947269166083}
+  wheels:
+  - {fileID: 1237073761561381792}
+  - {fileID: 1656596940272908244}
+  - {fileID: 1943371817465234110}
+  - {fileID: 3534423531515857582}
   startBurst: 10
   maxSpeed: 1
   turnSpeed: 1
@@ -193,7 +198,7 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
@@ -306,7 +311,7 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
@@ -419,7 +424,7 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
@@ -532,7 +537,7 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
