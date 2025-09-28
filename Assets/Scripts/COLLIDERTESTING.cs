@@ -1,16 +1,14 @@
 using UnityEngine;
-
+using UnityEngine.UIElements;
+[ExecuteInEditMode]
 public class COLLIDERTESTING : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void ExplosionDamage(Vector3 center, float radius)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius, ~0, QueryTriggerInteraction.Collide);
+        foreach (var hitCollider in hitColliders)
+        {
+            Debug.Log("Hit");
+        }
     }
 }
