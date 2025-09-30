@@ -1,51 +1,35 @@
+using System.Collections.Generic;
+using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 
 public class RailScript : MonoBehaviour
 {
-    public bool normalDir;
-    public SplineContainer railSpline;
-    public float totalSplineLength;
+    PlayerMovement PlayerMovement;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Transform triggerA;
+    public Transform triggerB;
+    public GameObject player;
+
+    //[Header("Movement Settings")]
+    //public float reachThreshold = 0.2f;
+    //public float throwForce = 10f;
+
+    //private GameObject player;
+    //private Transform targetTrigger;
+    //private bool moving = false;
+
+    private void Start()
     {
-        railSpline = GetComponent<SplineContainer>();
-        totalSplineLength = railSpline.CalculateLength();
+        player
     }
 
-    public Vector3 LocalToWorldConversion(float3 localpoint)
+    void Update()
     {
-        Vector3 worldPos = transform.TransformPoint(localpoint);
-        return worldPos;
-    }
-
-    public float3 WorldToLocalConversion(Vector3 worldpoint)
-    {
-        float3 localPos = transform.InverseTransformPoint(worldpoint);
-        return localPos;
-    }
-
-    public float CalculateTargetRailPoint(Vector3 playerPos, out Vector3 worldPosOnSpline)
-    {
-        float3 nearestPoint;
-        float time;
-        SplineUtility.GetNearestPoint(railSpline.Spline, WorldToLocalConversion(playerPos), out nearestPoint, out time);
-        worldPosOnSpline = LocalToWorldConversion(nearestPoint);
-        return time;
-    }
-
-    public void CalculateDirection(float3 railForward, Vector3 playrforward)
-    {
-        float angle = Vector3.Angle(railForward, playrforward.normalized);
-        if (angle > 90f)
+        if (player.GetComponent<Collider>().bounds.Intersects(triggerA.GetComponent<Collider>().bounds));
         {
-            normalDir = false;
-        }
-        else
-        {
-            normalDir = true;
+            player.transform.position = triggerB.position;
         }
     }
 }

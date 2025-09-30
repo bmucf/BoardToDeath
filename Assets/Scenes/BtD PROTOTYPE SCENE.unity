@@ -512,6 +512,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a2221b3902cc5458b9ec3cebf9a896, type: 3}
+--- !u!1 &69008586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5050669956948589875, guid: 8af5e372e79f9224dad548df41a4a48f, type: 3}
+  m_PrefabInstance: {fileID: 1401987560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &70086974
 GameObject:
   m_ObjectHideFlags: 0
@@ -39636,7 +39641,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5050669956948589875, guid: 8af5e372e79f9224dad548df41a4a48f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1812450822}
   m_SourcePrefab: {fileID: 100100000, guid: 8af5e372e79f9224dad548df41a4a48f, type: 3}
 --- !u!1001 &1408438746
 PrefabInstance:
@@ -51924,6 +51932,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4670989258347006958, guid: 8af5e372e79f9224dad548df41a4a48f, type: 3}
   m_PrefabInstance: {fileID: 1401987560}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1812450822
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69008586}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1813894433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54741,7 +54772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -56.20752, y: 20.1156}
+  m_AnchoredPosition: {x: 43, y: 28}
   m_SizeDelta: {x: 20, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837590100
@@ -54802,7 +54833,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -54816,7 +54847,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1232893631}
   m_FillRect: {fileID: 272567781}
   m_HandleRect: {fileID: 1232893630}
